@@ -1,10 +1,10 @@
-package com.github.wsppan.cardgames.playingcards.french;
+package com.github.jflaherty.cardgames.playingcards.french;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.github.wsppan.cardgames.playingcards.IRank;
-import com.github.wsppan.cardgames.playingcards.exceptions.IllegalRankException;
+import com.github.jflaherty.cardgames.playingcards.IRank;
+import com.github.jflaherty.cardgames.playingcards.exceptions.IllegalRankException;
 
 public enum Rank implements IRank {
     ACE_L(1, '1'), 

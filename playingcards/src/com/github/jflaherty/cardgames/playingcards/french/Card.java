@@ -1,14 +1,23 @@
-package com.github.wsppan.cardgames.playingcards.french;
+package com.github.jflaherty.cardgames.playingcards.french;
 
-import com.github.wsppan.cardgames.playingcards.ICard;
-import com.github.wsppan.cardgames.playingcards.exceptions.IllegalCardException;
+import java.awt.Image;
 
-public final class Card implements ICard, Comparable<Card> {
+import javax.swing.ImageIcon;
+
+import com.github.jflaherty.cardgames.playingcards.ICard;
+import com.github.jflaherty.cardgames.playingcards.exceptions.IllegalCardException;
+
+public class Card implements ICard, Comparable<Card> {
     private final Suit suit;
     private final Rank rank;
     private final String handNotation;
     private final String pokerNotation;
     private final String wikiSyntax;
+	private Image image;
+	
+	protected final static Image BACK_IMAGE = new ImageIcon(Card.class.getResource("french\\blueback.png")).getImage();
+	public final static int WIDTH = BACK_IMAGE.getWidth(null);
+	public final static int HEIGHT = BACK_IMAGE.getHeight(null);
 
     /**
      * Create the ACE_H of Spades
@@ -42,12 +51,17 @@ public final class Card implements ICard, Comparable<Card> {
 
 	this.rank = rank;
 	this.suit = suit;
+	setImage(rank, suit);
 
 	this.handNotation = rank.toString() + suit.toString();
 	this.pokerNotation = rank.toString() + suit.getSuitIcon() + suit.getSuitColor();
 	this.wikiSyntax = "{{cards|" + rank + suit + "}}";
     }
-
+    
+    public Image getImage() {
+    	return this.image;
+    }
+    
     /**
      * Returns poker card suit and rank in hand notation.
      * 
@@ -129,6 +143,14 @@ public final class Card implements ICard, Comparable<Card> {
 	return this.rank.equals(Rank.ACE_H);
     }
     
+    public boolean isAceLow() {
+	return this.rank.equals(Rank.ACE_L);
+    }
+    
+    public boolean isAce() {
+	return isAceLow() || isAceHigh();
+    }
+    
     @Override
     public int compareTo(Card otherCard) {
 	return (this.rank.asInt() - otherCard.rank.asInt()) * 4 + this.suit.asInt() - otherCard.suit.asInt();
@@ -156,5 +178,11 @@ public final class Card implements ICard, Comparable<Card> {
 		&& this.suit.getSuitColor().getColor().equals(other.suit.getSuitColor().getColor())
 		&& this.suit.getSuitIcon().getSymbol() == other.suit.getSuitIcon().getSymbol();
     }
+    
+    private void setImage(Rank rank, Suit suit) {
+		// Load up the appropriate image file for this card
+		String imageFileName = "\\french\\" + suit.getSuitIcon().getSymbol() + rank.asInt() + ".png";
+		this.image = new ImageIcon(this.getClass().getResource(imageFileName)).getImage();
+	}
 
 }

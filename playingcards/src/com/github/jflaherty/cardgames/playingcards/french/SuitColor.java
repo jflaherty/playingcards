@@ -1,6 +1,6 @@
-package com.github.wsppan.cardgames.playingcards.french;
+package com.github.jflaherty.cardgames.playingcards.french;
 
-import com.github.wsppan.cardgames.playingcards.ISuitColor;
+import com.github.jflaherty.cardgames.playingcards.ISuitColor;
 
 public enum SuitColor implements ISuitColor {
 

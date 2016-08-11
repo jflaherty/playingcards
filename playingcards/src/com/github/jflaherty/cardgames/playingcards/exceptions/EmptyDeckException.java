@@ -20,7 +20,7 @@
  * For more information, please refer to <http://unlicense.org/>
  */
 
-package com.github.wsppan.cardgames.playingcards.exceptions;
+package com.github.jflaherty.cardgames.playingcards.exceptions;
 
 /**
  * EmptyDeckException.java - No more cards in the deck.

@@ -1,7 +1,7 @@
-package com.github.wsppan.cardgames.playingcards;
+package com.github.jflaherty.cardgames.playingcards;
 
-import com.github.wsppan.cardgames.playingcards.exceptions.EmptyDeckException;
-import com.github.wsppan.cardgames.playingcards.french.Card;
+import com.github.jflaherty.cardgames.playingcards.exceptions.EmptyDeckException;
+import com.github.jflaherty.cardgames.playingcards.french.Card;
 
 public interface IDeck {
 

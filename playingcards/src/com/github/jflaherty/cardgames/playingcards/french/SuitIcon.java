@@ -1,6 +1,6 @@
-package com.github.wsppan.cardgames.playingcards.french;
+package com.github.jflaherty.cardgames.playingcards.french;
 
-import com.github.wsppan.cardgames.playingcards.ISuitIcon;
+import com.github.jflaherty.cardgames.playingcards.ISuitIcon;
 
 public enum SuitIcon implements ISuitIcon {
 

@@ -1,4 +1,4 @@
-package com.github.wsppan.cardgames.playingcards.exceptions;
+package com.github.jflaherty.cardgames.playingcards.exceptions;
 
 public class IllegalCardException extends Exception {
 

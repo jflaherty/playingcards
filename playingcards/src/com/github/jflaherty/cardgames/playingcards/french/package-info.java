@@ -40,4 +40,4 @@
  * @author Jay Flaherty
  * Based on work done by The Pffy Authors project, java-pokerdeck (https://github.com/pffy/java-pokerdeck)
  */
-package com.github.wsppan.cardgames.playingcards.french;
+package com.github.jflaherty.cardgames.playingcards.french;

@@ -1,10 +1,10 @@
-package com.github.wsppan.cardgames.playingcards.french;
+package com.github.jflaherty.cardgames.playingcards.french;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.github.wsppan.cardgames.playingcards.ISuit;
-import com.github.wsppan.cardgames.playingcards.exceptions.IllegalSuitException;
+import com.github.jflaherty.cardgames.playingcards.ISuit;
+import com.github.jflaherty.cardgames.playingcards.exceptions.IllegalSuitException;
 
 public enum Suit implements ISuit {
 

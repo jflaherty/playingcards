@@ -1,4 +1,4 @@
-package com.github.wsppan.cardgames.playingcards;
+package com.github.jflaherty.cardgames.playingcards;
 
 public interface ISuitColor {
 
